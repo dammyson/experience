@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">AgroSurvey</string>
+    <string name="to_log_in">Se connecter</string>
+    <string name="forgot_paword_q"><u>Password  forgotten ?</u></string>
+    <string name="login">Connexion</string>
+    <string name="username">Email</string>
+    <string name="discover_other_products"><u>Discover AgroSfer</u></string>
+    <string name="error_required_field">Required field</string>
+    <string name="in_progress">In progess…</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="no_internet_connection">Nos internet connexion</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_survey">Surveys</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="welcome">Welcome %s$</string>
+    <string name="profile">Profile</string>
+    <string name="no_survey_found">No survey.</string>
+    <string name="an_error_occurred">An error occurred.</string>
+    <string name="upload_on">Updated on : %s</string>
+    <string name="reload"><u>Reload</u></string>
+    <string name="search">Search</string>
+    <string name="password">Password</string>
+    <string name="survey_form">Survey form</string>
+    <string name="survey_page">Survey page</string>
+    <string name="survey_has_no_question">This survey has no question.</string>
+    <string name="no_match">No match found for \"%s\"</string>
+    <string name="msg">Error Creating Feedback</string>
+    <string name="feedback_create_msg">Feedback created</string>
+    <string name="msg_is_mandatory">*Obligatoire</string>
+
+    <string-array name="birds">
+        <item>crane</item>
+        <item>Cuckoo</item>
+        <item>Pigeon</item>
+        <item>Eagle</item>
+        <item>Owl</item>
+        <item>Vulture</item>
+        <item>WoodPecker</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_confirm_position">Do you want to save the current location ?</string>
+    <string name="yes">YES</string>
+    <string name="No">NO</string>
+    <string name="msg_confirm_pathline">Do you confirm your pathline ?</string>
+    <string name="msg_pathline_success">Pathline saved successfuly</string>
+
+</resources>

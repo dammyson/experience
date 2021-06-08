@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/grid_1_5"
+            android:background="@drawable/survey_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/grid_1"
+            android:paddingBottom="@dimen/grid_3">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:scaleType="center"
+                android:layout_margin="@dimen/grid_1"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_doc"
+                android:singleLine="true"
+                android:paddingVertical="30dp"
+                android:layout_gravity="center"
+                app:tint="@color/grey_form" />
+
+            <TextView
+                android:id="@+id/file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="center"
+                android:textSize="10dp"
+                />
+
+            <Button
+                android:id="@+id/btn_pick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attach a file"
+                android:layout_gravity="center"
+                android:textSize="10dp"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

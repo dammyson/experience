@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AgroSurvey" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!--Material shape attributes-->
+        <!-- <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.ANaMa.SmallComponent</item>
+         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.ANaMa.MediumComponent</item>
+         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.ANaMa.LargeComponent</item>-->
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="toolbarStyle">@style/ThemeOverlay.Agrosurvey.Toolbar</item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline2">@style/TextAppearance.AgroSurvey.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.AgroSurvey.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.AgroSurvey.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.AgroSurvey.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.AgroSurvey.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.AgroSurvey.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.AgroSurvey.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.AgroSurvey.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.AgroSurvey.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.AgroSurvey.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.AgroSurvey.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.AgroSurvey.Overline</item>
+
+    </style>
+
+    <style name="AgroSurvey" parent="Theme.AgroSurvey" />
+
+    <style name="AgroSurvey.Black" parent="AgroSurvey">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/grey_dark</item>
+        <item name="colorPrimaryVariant">@color/grey_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/white_pale</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/grey_dark</item>
+        <item name="colorSecondaryVariant">@color/grey_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="colorOnBackground">@color/white_pale</item>
+        <item name="android:statusBarColor" tools:targetApi="l">
+            #111<!--?attr/colorPrimaryVariant--></item>
+        <!-- Customize your theme here. -->
+    </style>
+
+</resources>

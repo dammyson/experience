@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="org.agrosurvey.features.survey.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_surveys"
+        android:name="org.agrosurvey.features.survey.ui.surveys.SurveysFragment"
+        android:label="@string/title_survey"
+        tools:layout="@layout/fragment_surveys">
+
+        <action
+            android:id="@+id/from_surveys_to_survey_form"
+            app:destination="@id/navigation_survey_form"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="org.agrosurvey.features.survey.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+
+    <!-- Form Visualizers -->
+    <fragment
+        android:id="@+id/navigation_survey_form"
+        android:name="org.agrosurvey.forms.rendering.pager.FragmentSurveyPager"
+        android:label="@string/survey_form"
+        tools:layout="@layout/fragment_survey_pager" />
+
+    <fragment
+        android:id="@+id/navigation_survey_form_page"
+        android:name="org.agrosurvey.forms.rendering.FragmentFormPage"
+        android:label="@string/survey_page"
+        tools:layout="@layout/fragment_survey_page" />
+</navigation>

@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Form" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="toolbarStyle">@style/ThemeOverlay.Agrosurvey.Toolbar</item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Form.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Form.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Form.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Form.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Form.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Form.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Form.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Form.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Form.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Form.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Form.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Form.Overline</item>
+
+    </style>
+
+    <style name="Form" parent="Theme.Form" />
+
+    <style name="Form.Black" parent="Form">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/grey_form</item>
+        <item name="colorPrimaryVariant">@color/grey_form</item>
+        <item name="colorOnPrimary">@color/white_form</item>
+        <item name="android:windowBackground">@color/white_pale_form</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/grey_form</item>
+        <item name="colorSecondaryVariant">@color/grey_form</item>
+        <item name="colorOnSecondary">@color/white_form</item>
+        <!-- Status bar color. -->
+        <item name="colorOnBackground">@color/white_pale_form</item>
+        <item name="android:statusBarColor" tools:targetApi="l">
+            #111<!--?attr/colorPrimaryVariant--></item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Form.TextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="backgroundTint">@color/background_tint</item>
+    </style>
+
+
+    <style name="Widget.AgroSurvet.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Agrosurvey.Toolbar</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Form.Headline6</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.Form.Subtitle1</item>
+    </style>
+
+    <style name="ThemeOverlay.Agrosurvey.Toolbar" parent="ThemeOverlay.MaterialComponents.Dark">
+        <item name="colorPrimary">@color/grey_form</item>
+        <item name="colorOnSurface">@color/white_form</item>
+
+        <item name="colorPrimaryVariant">@color/grey_form</item>
+        <item name="colorOnPrimary">?android:colorPrimary</item>
+    </style>
+
+    <style name="Theme.Form.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Form.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Form.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    >
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_form"
+    android:fitsSystemWindows="true">
+
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/grid_2"
+        android:foreground="@drawable/ripple_circular"
+        android:padding="@dimen/grid_0_5"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sync"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="@dimen/grid_2"
+        android:alpha="0.3"
+        android:foreground="@drawable/ripple_circular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/close"
+        app:srcCompat="@drawable/ic_upload" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/sections"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/grid_2"
+        app:tabContentStart="20dp"
+        app:tabIconTint="@color/white_form"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/close"
+        app:tabMaxWidth="48dp"
+        app:tabPadding="0dp"
+        app:tabIndicatorColor="@color/white_form"
+        app:tabMode="scrollable">
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <TextView
+        android:id="@+id/active_section_title"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/grid_1"
+        android:textColor="@color/white_form"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sections"
+        tools:text="S1 Section title" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/grid_2"
+        android:background="@color/white_pale_form"
+        android:backgroundTint="@color/grey_form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sections">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

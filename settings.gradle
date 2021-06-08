@@ -1,0 +1,7 @@
+include ':sonarnet'
+include ':survey'
+include ':forms'
+include ':data'
+include ':domain'
+include ':app'
+rootProject.name = "AgroSurvey"

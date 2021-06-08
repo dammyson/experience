@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id("kotlin-kapt")
+    id("kotlin-android-extensions")
+    id("dagger.hilt.android.plugin")
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdk
+    buildToolsVersion rootProject.ext.buildTools
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
+    buildTypes {
+        
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        staging {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation kotlinLib.kotlin
+    implementation kotlinLib.coroutines
+
+    // Jetpack
+    implementation appDependencies.appCompat
+    implementation appDependencies.androidxKtx
+    implementation appDependencies.constraintLayout
+    implementation appDependencies.supportV4
+    implementation appDependencies.material
+    implementation appDependencies.fragmentKtx
+    implementation appDependencies.preference
+    implementation appDependencies.lifecycleExtensions
+    implementation appDependencies.recyclerview
+    implementation appDependencies.recyclerviewAnimations
+    implementation appDependencies.dynamicAnimation
+
+    implementation appDependencies.fragmentKtx
+    implementation appDependencies.navigationFragmentKtx
+    implementation appDependencies.navigationFragmentRunTimeKtx
+    implementation appDependencies.navigationUiKtx
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+    kapt appDependencies.hiltForCompiler
+    kapt appDependencies.hiltForKotlinCompiler
+    implementation appDependencies.hiltAndroid
+    implementation appDependencies.hiltForLifecycleViewModel
+    implementation appDependencies.hiltForWorkerManager
+
+
+    implementation dataDependencies.gson
+    implementation appDependencies.logcatWithTimber
+
+    //implementation appDependencies.connectivity
+    implementation appDependencies.pagingRuntimeKtx
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation project(path: ':domain')
+
+}

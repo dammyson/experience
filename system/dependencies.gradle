@@ -1,0 +1,147 @@
+ext {
+
+    // Kotlin
+    kotlinVersion = '1.4.31'
+
+    // sdk
+    compileSdk = 30
+    targetSdk = 30
+    minSdk = 21
+    buildTools = "30.0.3"
+
+    // App Versioning
+    versionCodeMajor = 0
+    versionCodeMinor = 0
+    versionCodePatch = 1
+    versionCode = versionCodeMajor * 10000 + versionCodeMinor * 100 + versionCodePatch
+    versionName = "$versionCodeMajor.$versionCodeMinor.$versionCodePatch"
+
+    appcompatVersion = '1.2.0'
+    androidxCoreKtxVersion = '1.5.0-beta02'
+    constraintLayoutVersion = '2.0.4'
+    supportV4Version = '1.0.0'
+    recyclerViewVersion = "1.1.0"
+    dynamicAnimationVersion = "1.0.0"
+    navVersion = '2.3.3'
+    navSafeArgsVersion = '2.3.1'
+    materialVersion = '1.3.0'
+    analyticsVersion = '18.0.2'
+    fragmentKtxVersion = '1.3.0'
+    logcatTimberVersion = '4.7.1'
+    pagingVersion = "3.0.0-beta01"
+    preferenceVersion = "1.1.1"
+    leakCanaryVersion = '2.0'
+    koinVersion = '2.1.5'
+    crashlyticsVersion = '17.3.1'
+    lifecycleExtensionsVersion = '2.2.0'
+    recyclerviewAnimationVersion = '4.0.2'
+    aboutLibsVersion = '8.0.0-rc01'
+    stethoVersion = '1.5.1'
+    kielVersion = '1.2.1'
+    sonarnetVersion = '0.0.3'
+
+    // Data
+    retrofitVersion = '2.9.0'
+    okhttpVersion = '3.0.1'
+    retrofitCoroutinesVersion = '0.9.2'
+    moshiConverterVersion = '2.9.0'
+    loggingInterceptorVersion = '4.9.0'
+    firebaseVersion = '26.3.0'
+    roomVersion = '2.2.6'
+    glideVersion = '4.12.0'
+    coroutinesCoreVersion = '1.4.2-native-mt'
+    gsonVersion = '2.8.6'
+    loggingInterceptorVersion = '5.0.0-alpha.2'
+
+    // Testing
+    mockitoVersion = '3.8.0'
+    junitVersion = '4.13.2'
+    espressoVersion = '3.3.0'
+    androidxJunitVersion = '1.1.2'
+    truthVersion = '1.1.2'
+    mockitoInlineVersion = '2.13.0'
+    mockWebServerVersion = '4.9.0'
+    robolectricVersion = '4.5.1'
+    androidxTestCoreVersion = '1.3.0'
+    runnerVersion = '1.3.0'
+    rulesVersion = '1.3.0'
+    archComponentTestVersion = '2.1.0'
+    hiltVersion = '2.33-beta'
+    hiltAndroidxVersion = '1.0.0-alpha03'
+
+
+    appDependencies = [
+            appCompat                   : "androidx.appcompat:appcompat:$appcompatVersion",
+            androidxKtx                 : "androidx.core:core-ktx:$androidxCoreKtxVersion",
+            constraintLayout            : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
+            supportV4                   : "androidx.legacy:legacy-support-v4:$supportV4Version",
+            material                    : "com.google.android.material:material:$materialVersion",
+            preference                  : "androidx.preference:preference-ktx:$preferenceVersion",
+            lifecycleExtensions         : "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion",
+
+            recyclerview                : "androidx.recyclerview:recyclerview:$recyclerViewVersion",
+            recyclerviewAnimations      : "jp.wasabeef:recyclerview-animators:$recyclerviewAnimationVersion",
+            dynamicAnimation            : "androidx.dynamicanimation:dynamicanimation:$dynamicAnimationVersion",
+
+            fragmentKtx                 : "androidx.fragment:fragment-ktx:$fragmentKtxVersion",
+            navigationFragmentKtx       : "androidx.navigation:navigation-fragment-ktx:$navVersion",
+            navigationFragmentRunTimeKtx: "androidx.navigation:navigation-runtime-ktx:$navVersion",
+            navigationUiKtx             : "androidx.navigation:navigation-ui-ktx:$navVersion",
+
+            firebaseCrashlytics         : "com.google.firebase:firebase-crashlytics:$crashlyticsVersion",
+            //connectivity                : "com.fabricethilaw.sonarnet:core:$sonarnetVersion",
+            pagingRuntimeKtx            : "androidx.paging:paging-runtime-ktx:$pagingVersion",
+
+            hiltAndroid                 : "com.google.dagger:hilt-android:$hiltVersion",
+            hiltForCompiler             : "com.google.dagger:hilt-android-compiler:$hiltVersion",
+            hiltForLifecycleViewModel   : "androidx.hilt:hilt-lifecycle-viewmodel:$hiltAndroidxVersion",
+            hiltForWorkerManager        : "androidx.hilt:hilt-work:$hiltAndroidxVersion",
+            hiltForFragmentNavigation   : "androidx.hilt:hilt-navigation-fragment:$hiltAndroidxVersion",
+            hiltForKotlinCompiler       : "androidx.hilt:hilt-compiler:$hiltAndroidxVersion",
+
+            logcatWithTimber            : "com.jakewharton.timber:timber:$logcatTimberVersion"
+    ]
+
+    dataDependencies = [
+            retrofit               : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            okhttp                 : "com.squareup.okhttp3:okhttp:$okhttpVersion",
+            moshiConverter         : "com.squareup.retrofit2:converter-moshi:$moshiConverterVersion",
+            loggingInterceptor     : "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion",
+            retrofit_gson_converter: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofit_coroutines    : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$retrofitCoroutinesVersion",
+
+            roomRuntime            : "androidx.room:room-runtime:$roomVersion",
+            roomCompiler           : "androidx.room:room-compiler:$roomVersion",
+            roomKtx                : "androidx.room:room-ktx:$roomVersion",
+            firebaseBoM            : "com.google.firebase:firebase-bom:$firebaseVersion",
+            firebaseAuth           : "com.google.firebase:firebase-auth-ktx",
+            gson                   : "com.google.code.gson:gson:$gsonVersion",
+            glide                  : "com.github.bumptech.glide:glide:$glideVersion",
+            glideKapt              : "com.github.bumptech.glide:compiler:$glideVersion"
+    ]
+
+    kotlinLib = [
+            kotlin                 : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
+            coroutines        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesCoreVersion"
+    ]
+
+    testDependencies = [
+            junit                 : "junit:junit:$junitVersion",
+            androidxJunit         : "androidx.test.ext:junit:$androidxJunitVersion",
+            espressoCore          : "androidx.test.espresso:espresso-core:$espressoVersion",
+            googleTruth           : "com.google.truth:truth:$truthVersion",
+            mockWebServer         : "com.squareup.okhttp3:mockwebserver:$mockWebServerVersion",
+            mockito               : "org.mockito:mockito-core:$mockitoVersion",
+            robolectric           : "org.robolectric:robolectric:$robolectricVersion",
+            androidxCoreTest      : "androidx.test:core:$androidxTestCoreVersion",
+            runner                : "androidx.test:runner:$runnerVersion",
+            rules                 : "androidx.test:rules:$rulesVersion",
+            espressoIntents       : "androidx.test.espresso:espresso-intents:$espressoVersion",
+            espressoContrib       : "androidx.test.espresso:espresso-contrib:$espressoVersion",
+            espressoIdlingResource: "androidx.test.espresso:espresso-idling-resource:$espressoVersion",
+            archComponentTest     : "androidx.arch.core:core-testing:$archComponentTestVersion",
+            coroutinesTest        : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesCoreVersion",
+            roomTest              : "androidx.room:room-testing:$roomVersion",
+            pagingTest            : "androidx.paging:paging-common-ktx:$pagingVersion"
+    ]
+}

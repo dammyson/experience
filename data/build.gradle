@@ -1,0 +1,117 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id("kotlin-kapt")
+    id("kotlin-android-extensions")
+    id("dagger.hilt.android.plugin")
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdk
+    buildToolsVersion rootProject.ext.buildTools
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "String", "API_BASE_URL", "\"http://agp-api.agrosfer.org/\""
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        staging {
+            buildConfigField "String", "API_BASE_URL", "\"http://agp-api.agrosfer.org/\""
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            buildConfigField "String", "API_BASE_URL", "\"http://agp-api.agrosfer.org/\""
+
+            minifyEnabled false
+            manifestPlaceholders = [crashlyticsEnabled: false]
+            testCoverageEnabled true
+        }
+    }
+
+    compileOptions {
+        // Flag to enable support for the new language APIs
+        // coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation kotlinLib.kotlin
+    implementation kotlinLib.coroutines
+
+    implementation appDependencies.appCompat
+    implementation appDependencies.androidxKtx
+    implementation appDependencies.material
+
+   // implementation appDependencies.connectivity
+
+    kapt appDependencies.hiltForCompiler
+    kapt appDependencies.hiltForKotlinCompiler
+    implementation appDependencies.hiltAndroid
+    implementation appDependencies.hiltForLifecycleViewModel
+    implementation appDependencies.hiltForWorkerManager
+
+    implementation appDependencies.logcatWithTimber
+    implementation 'joda-time:joda-time:2.10.10'
+    implementation dataDependencies.retrofit
+    implementation dataDependencies.okhttp
+    implementation dataDependencies.loggingInterceptor
+    implementation dataDependencies.retrofit_gson_converter
+    implementation dataDependencies.retrofit_coroutines
+
+    implementation dataDependencies.roomRuntime
+    implementation dataDependencies.roomCompiler
+    implementation dataDependencies.roomKtx
+
+    implementation dataDependencies.gson
+    //implementation appDependencies.connectivity
+
+    implementation project(path: ':domain')
+
+
+    testImplementation testDependencies.androidxJunit
+    testImplementation testDependencies.junit
+    testImplementation testDependencies.espressoCore
+    androidTestImplementation testDependencies.mockWebServer
+    testImplementation testDependencies.robolectric
+    testImplementation testDependencies.androidxCoreTest
+    testImplementation testDependencies.runner
+    testImplementation testDependencies.googleTruth
+    testImplementation testDependencies.rules
+    testImplementation testDependencies.espressoContrib
+    testImplementation testDependencies.espressoIdlingResource
+    testImplementation testDependencies.archComponentTest
+    testImplementation testDependencies.coroutinesTest
+    testImplementation testDependencies.roomTest
+    testImplementation testDependencies.pagingTest
+    testImplementation testDependencies.mockito
+
+
+}

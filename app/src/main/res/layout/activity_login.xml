@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="org.agrosurvey.features.login.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/illu_login_bg" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="162.85dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_agrosfer"
+            app:layout_constraintBottom_toTopOf="@id/card_view"
+            app:layout_constraintDimensionRatio="2.88"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:clipChildren="true"
+            android:clipToPadding="false"
+            android:maxWidth="380dp"
+            app:cardElevation="@dimen/grid_2"
+            android:layout_marginTop="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottom">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@android:id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/grid_2"
+                    android:text="Bienvenue dans notre sphère"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/headline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green"
+                    android:elevation="@dimen/grid_0_5"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/grid_2"
+                    android:text="@string/to_log_in"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@android:id/title"
+                    app:layout_constraintWidth_percent="1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="@dimen/grid_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/headline"
+                    app:layout_constraintVertical_bias="0.0">
+
+
+                    <TextView
+                        android:id="@+id/label_username"
+                        style="@style/TextAppearance.AgroSurvey.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1"
+                        android:fontFamily="@font/montserrat"
+                        android:singleLine="true"
+                        android:text="@string/username"
+                        app:layout_constraintBottom_toTopOf="@id/field_username"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/field_username"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#8C9896"
+                        app:boxBackgroundColor="@color/white_pale"
+                        app:endIconMode="clear_text"
+                        app:errorEnabled="true"
+                        app:layout_constraintBottom_toTopOf="@id/label_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/field_username"
+                        app:layout_constraintWidth_percent="0.78">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/grey_dark"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/label_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/grid_1_5"
+                        android:singleLine="true"
+                        android:text="@string/password"
+                        app:layout_constraintBottom_toTopOf="@id/field_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/field_username" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/field_password"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/white_pale"
+                        app:endIconMode="password_toggle"
+                        app:errorEnabled="true"
+                        app:layout_constraintBottom_toTopOf="@id/button_login"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label_username"
+                        app:layout_constraintWidth_percent="0.78">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:textColor="@color/grey_dark"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/grid_2"
+                        android:backgroundTint="@color/blue"
+                        android:paddingHorizontal="@dimen/grid_3"
+                        android:paddingVertical="@dimen/grid_1"
+                        android:text="@string/login"
+                        android:clickable="true"
+                        android:textAllCaps="false"
+                        android:focusable="true"
+                        app:cornerRadius="@dimen/grid_3"
+                        app:layout_constraintBottom_toTopOf="@id/label_forgot_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toBottomOf="@id/field_password" />
+
+                    <TextView
+                        android:id="@+id/label_login_error"
+                        style="@style/TextAppearance.AgroSurvey.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:visibility="gone"
+                        tools:text="Login failed" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/label_forgot_password"
+                        style="@style/TextAppearance.AgroSurvey.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/grid_2"
+                        android:background="#0000"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:text="@string/forgot_paword_q" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/left_edge_guidline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/grid_2"
+            app:layout_constraintBottom_toBottomOf="@id/card_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/card_view"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/outer_left_edge"
+            android:layout_width="@dimen/grid_1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-1dp"
+            android:background="@drawable/bg_rect_corned_left_filled_green"
+            android:elevation="@dimen/grid_2"
+            android:paddingVertical="@dimen/grid_2"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/card_view"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/left_edge_guidline"
+            app:layout_constraintWidth_percent="1" />
+
+
+        <TextView
+            android:id="@+id/outer_right_edge"
+            android:layout_width="@dimen/grid_1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-1dp"
+            android:background="@drawable/bg_rect_corned_right_filled_green"
+            android:elevation="@dimen/grid_2"
+            android:paddingVertical="@dimen/grid_2"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/card_view"
+            app:layout_constraintTop_toBottomOf="@id/left_edge_guidline"
+            app:layout_constraintWidth_percent="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/other_products"
+            style="@style/TextAppearance.AgroSurvey.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#5560B237"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="@string/discover_other_products"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/grid_2"
+            app:icon="@drawable/ic_doc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

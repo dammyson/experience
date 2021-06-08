@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_form">#60B237</color>
+    <color name="blue_form">#0891B2</color>
+    <color name="brown_form">#FF49453D</color>
+    <color name="grey_form">#414042</color>
+    <color name="black_form">#FF000000</color>
+
+    <color name="white_form">#FFFFFFFF</color>
+    <color name="white_pale_form">#F5F5F5</color>
+    <color name="background_tint">#8C9896</color>
+
+</resources>
